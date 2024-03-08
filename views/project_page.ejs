@@ -1,4 +1,4 @@
-<div class="w-50 border border-secondary border-1 p-3 m-auto">
+<!-- <div class="w-50 border border-secondary border-1 p-3 m-auto">
     <h3 class="display-5 p-3 mb-2 bg-secondary text-white">
       Project : <%= project.name %>
     </h3>
@@ -8,5 +8,21 @@
     <h5 class="display-6 p-3 mb-2 bg-info text-dark">
       Description : <%= project.description %>
     </h5>
-  </div>
+  </div> -->
+  <link rel="stylesheet" href="../assets/css/project_page.css">
+
+<!-- html code for show  the project details in project page -->
+<div class="d-flex align-items-center container mt-2">
+    <div class="card container w-50 project-container ">
+        <div class="card-body">
+            <h5 class="card-title bg-danger text-light">Project Name:-<%=project.name%>
+            </h5>
+            <p class="card-text bg-sec">Project Details:<%=project.description%>
+            </p>
+            <p class="card-text">Project Author:<%=project.author%>
+            </p>
+        </div>
+    </div>
+</div>
+
   <%-include('./partials/_issues'); %>

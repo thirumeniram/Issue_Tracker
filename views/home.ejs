@@ -1,7 +1,7 @@
 <head>
     <style>
       .card {
-        background-color: lightblue;
+        background-color: rgb(245, 246, 246);
       }
     </style>
   </head>
@@ -15,6 +15,11 @@
             <strong> Name of the project : </strong>
             <%= project.name %>
           </div>
+          <div>
+            <a href="/project/delete/?id=<%=project.id%>" class="delete-link">
+              <i class="fa-solid fa-trash fa-bounce" style="color: #1f5120;"></i>
+            </a>
+          </div>
           <div class="card-body">
             <h6 class="card-subtitle mb-2 text-muted">
               <strong> Author : </strong>
@@ -26,10 +31,12 @@
             </p>
   
             <div class="m-auto text-end">
-              <a href="/project/<%=project._id%>" class="btn btn-primary m-auto">Open project</a>
-            </div>
+                <a href="/project/<%=project._id%>" class="btn btn-primary m-auto" style="background-color: rgb(75 75 75); color: white; border-color: rgb(75, 75, 75)">Open project</a>
+              </div>
+              
           </div>
         </div>
         <% } %>
     </div>
+    <script src="../assets//js/delete_project.js"></script>
   </body>
