@@ -12,10 +12,11 @@
   <link rel="stylesheet" href="../assets/css/project_page.css">
 
 <!-- html code for show  the project details in project page -->
-<div class="d-flex align-items-center container mt-2">
+<div style="border: 2px solid gray;">
+<div class="d-flex align-items-center container" style="margin-top: 100px;">
     <div class="card container w-50 project-container ">
         <div class="card-body">
-            <h5 class="card-title bg-danger text-light">Project Name:-<%=project.name%>
+            <h5 class="card-title " style="padding-left: 180px;">Project Name:<%=project.name%>
             </h5>
             <p class="card-text bg-sec">Project Details:<%=project.description%>
             </p>
@@ -26,3 +27,4 @@
 </div>
 
   <%-include('./partials/_issues'); %>
+</div>

@@ -1,101 +1,8 @@
-
-  
-   <div class="text-end">
-    <button type="button" class="btn m-auto btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Create Issue</button>
-  </div>
-  <% 
-  function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
-  %>
-    
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Create an Issue</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form class="border border-light border-3" action="/project/<%= project._id %>" method="POST">
-          <div class="modal-body"> -->
-            <!-- Title -->
-            <div class="mb-3 row">
-              <label for="titlelabel" class="col-sm-2 col-form-label">Title</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" name="title" id="titlelabel" placeholder="Title" required>
-              </div>
-            </div>
-            
-            <!-- Description -->
-             <div class="mb-3 row">
-              <label for="descriptionlabel" class="col-sm-2 col-form-label">Description</label>
-              <div class="col-sm-10">
-                <textarea class="form-control" name="description" id="descriptionlabel" placeholder="Describe your issue..." required></textarea>
-              </div>
-            </div>
-  
-            <!-- Labels Header -->
-            <div class="mb-3 row">
-              <div class="col-sm-12">
-                <label class="form-label">Labels</label>
-              </div>
-            </div>
-
-            <% if (project.labels && project.labels.length > 0) { %>
-                <div class="mb-3 row">
-                  <div class="col-sm-2 col-form-label">Project Labels</div>
-                  <div class="col-sm-10">
-                    <div class="dropdown">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                        Choose Labels
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <% project.labels.forEach(label => { %>
-                          <li><a class="dropdown-item" href="#"><%= label %></a></li>
-                        <% }); %>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              <% } %>
-  
-            <!-- Add Labels -->
-            <div class="mb-3 row">
-                <label class="col-sm-2 col-form-label">Add Labels</label>
-                <div class="col-sm-10">
-                  <% ['Bug', 'UI Improvement', 'Documentation', 'Enhancement', 'Duplicate'].forEach(label => { %>
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="checkbox" name="labels" value="<%= label %>" id="<%= label.toLowerCase().replace(' ', '-') %>">
-                      <label class="form-check-label" for="<%= label.toLowerCase().replace(' ', '-') %>"><%= label %></label>
-                    </div>
-                  <% }); %>
-                </div>
-              </div>
-            
-              
-            <!-- Author -->
-            <div class="mb-3 row">
-              <label for="authorlabel" class="col-sm-2 col-form-label">Author</label>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" name="author" id="authorlabel" placeholder="Author" required>
-              </div>
-            </div>
-          </div>
-          
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Create Issue</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-   
-
-   <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Create Issue</button>
+<!-- ejs code for button -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Create Issue</button>
 
 <!-- html code for issue form -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -112,7 +19,7 @@
             <label for="message-text" class="col-form-label">Description:</label>
             <textarea class="form-control" name="description" id="description"><%=project.description%></textarea>
           </div>
-          <% if(project.labels.length>0) { %>
+          <!-- <% if(project.labels.length>0) { %>
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Labels
@@ -123,8 +30,8 @@
                 <%}%>
               </ul>
             </div>
-            <%}%>
-            <div class="row mb-3 m-auto">
+            <%}%> -->
+            <!-- <div class="row mb-3 m-auto">
               <label for="labels" class="col-sm-4 col-form-label">Add Labels</label>
     
               <div class="col-sm-8">
@@ -143,7 +50,53 @@
                 <input name="labels" class="form-check-input" type="checkbox" value="Duplicate" id="duplicate"/>
                 <label class="form-check-label" for="duplicate"> Duplicate </label>
               </div>
-            </div>
+            </div> -->
+              <!-- Labels Header -->
+              <!-- <div class="mb-3 row">
+                <div class="col-sm-12">
+                  <label class="form-label">Labels</label>
+                </div>
+              </div> -->
+  
+              <% if (project.labels && project.labels.length > 0) { %>
+                  <div class="mb-3 row">
+                    <div class="col-sm-2 col-form-label">Project Labels</div>
+                    <div class="col-sm-10">
+                      <div class="dropdown"     style="padding-left: 100px;
+                      padding-top: 10px;">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
+                    
+                    
+                        >
+                          Choose Labels
+                        </button>
+                        <div>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"  style="margin-left: 90px;
+                        margin-top: 5px;">
+                          <% project.labels.forEach(label => { %>
+                            <li><a class="dropdown-item" href="#"><%= label %></a></li>
+                          <% }); %>
+                        </ul>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                <% } %>
+    
+              <!-- Add Labels -->
+              <div class="row mb-3 m-auto">
+                <label for="labels" class="col-sm-4 col-form-label" style="padding-left: 0px;">Add Labels</label>
+                <div class="col-sm-8">
+                  <% ["Bug", "UI Improvement", "Documentation", "Enhancement", "Duplicate"].forEach(function(label) { %>
+                    <div class="form-check">
+                      <input class="form-check-input" name="labels" type="checkbox" value="<%= label %>" id="<%= label.toLowerCase().replace(/ /g, '-') %>"/>
+                      <label class="form-check-label" for="<%= label.toLowerCase().replace(/ /g, '-') %>"> <%= label %> </label>
+                    </div>
+                  <% }); %>
+                </div>
+              </div>
+              
+  
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label">Author:</label>
             <input type="text" name="author" value="<%=project.author%>" class="form-control" id="author">
@@ -156,4 +109,4 @@
     </form>
     </div>
   </div>
-</div> --> -->
+</div>

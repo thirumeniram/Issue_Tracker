@@ -275,7 +275,7 @@
     </div>
     <div id="issue-data" data="<%=JSON.stringify(project.issues)%>"></div>
     <script src="/js/filterIssues.js"></script>
-    <script src="/js/searchIssues.js"></script> --> --> -->
+    <script src="/js/searchIssues.js"></script> --> 
 
 
     <link rel="stylesheet" href="../../assets/css/issue_page.css">
@@ -287,7 +287,8 @@
   <div class="w-50 my-5 d-flex justify-content-around mx-auto">
     <div>
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-warning" style=" --bs-btn-padding-y: 0.25rem;--bs-btn-padding-x: 0.5rem;--bs-btn-font-size: 1rem;" data-bs-toggle="modal"
+      <button type="button" class="btn btn-warning" style=" --bs-btn-padding-y: 0.25rem;--bs-btn-padding-x: 0.5rem;--bs-btn-font-size: 1rem;
+       background-color: rgb(75 75 75); color: white; border-color: rgb(75, 75, 75)" data-bs-toggle="modal"
         data-bs-target="#allIssue">Show All Issues</button>
   
       <!-- Modal -->
@@ -326,9 +327,11 @@
     </div>
     <div>
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-warning" style="--bs-btn-padding-y: 0.25rem;--bs-btn-padding-x: 0.5rem;--bs-btn-font-size: 1rem;"
-        data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop">
+      <button type="button" class="btn btn-warning" style="--bs-btn-padding-y: 0.25rem;--bs-btn-padding-x: 0.5rem;
+      --bs-btn-font-size: 1rem;
+      background-color: rgb(75 75 75); color: white; border-color: rgb(75, 75, 75)"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop">
         Filter Issues
       </button>
   
@@ -381,7 +384,11 @@
 
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-warning" style="--bs-btn-padding-y: 0.25rem;--bs-btn-padding-x: 0.5rem;
-          --bs-btn-font-size: 1rem;" data-bs-toggle="modal" data-bs-target="#searchmodal">Search Issues</button>
+          --bs-btn-font-size: 1rem;
+          background-color: rgb(75 75 75); color: white; border-color: rgb(75, 75, 75)
+          " 
+          data-bs-toggle="modal" data-bs-target="#searchmodal">
+          Search Issues</button>
   
       <!-- Modal -->
       <div class="modal fade" id="searchmodal" tabindex="-1" aria-labelledby="searchmodalLabel" aria-hidden="true">
@@ -418,9 +425,7 @@
     </div>
   </div>
   <% } %>
-  <div class="w-50 mb-5 mx-auto">
-    <div class="card w-100 mb-5" style="width: 18rem" id="issues-list"></div>
-  </div>
+
 
   <div id="issue-data" data="<%=JSON.stringify(project.issues)%>"></div>
   <script src="/js/filterIssue.js"></script>
