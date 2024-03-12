@@ -32,7 +32,7 @@ Open your web browser and visit `http://localhost:3000` (or whichever port you h
   
   **Project Detail Page:**
   
-    - Shows all issues related to a project with options to filter by labels, author, and search by title and description. Users can also create new issues from this page.
+  - Shows all issues related to a project with options to filter by labels, author, and search by title and description. Users can also create new issues from this page.
   
 **Creating Issue :**
    - Enables users to add new issues to a project with fields for the title, description, labels, and author.
