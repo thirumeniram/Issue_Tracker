@@ -21,20 +21,20 @@ Open your web browser and visit `http://localhost:3000` (or whichever port you h
 
 ## Features
 
-- **Neat UI:**
-    A user-friendly interface that makes tracking issues simple.
+**Neat UI:**
+   - A user-friendly interface that makes tracking issues simple.
   
-- **Home Page:**
-    List of all projects with the option to create a new project.
+ **Home Page:**
+   - List of all projects with the option to create a new project.
   
-- **Creating a Project:**
-    Allows users to create a new project with fields for the name, description, and author.
+ **Creating a Project:**
+   - Allows users to create a new project with fields for the name, description, and author.
   
-- **Project Detail Page:**
-    Shows all issues related to a project with options to filter by labels, author, and search by title and description. Users can also create new issues from this page.
+  **Project Detail Page:**
+    - Shows all issues related to a project with options to filter by labels, author, and search by title and description. Users can also create new issues from this page.
   
-- **Creating Issue :**
-    Enables users to add new issues to a project with fields for the title, description, labels, and author.
+**Creating Issue :**
+   - Enables users to add new issues to a project with fields for the title, description, labels, and author.
 
 
 
