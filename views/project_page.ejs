@@ -1,30 +1,20 @@
-<!-- <div class="w-50 border border-secondary border-1 p-3 m-auto">
-    <h3 class="display-5 p-3 mb-2 bg-secondary text-white">
-      Project : <%= project.name %>
-    </h3>
-    <h4 class="display-6 p-3 mb-2 bg-light text-dark">
-      Author : <%= project.author %>
-    </h4>
-    <h5 class="display-6 p-3 mb-2 bg-info text-dark">
-      Description : <%= project.description %>
-    </h5>
-  </div> -->
-  <link rel="stylesheet" href="../assets/css/project_page.css">
 
-<!-- html code for show  the project details in project page -->
-<div style="border: 2px solid gray;">
-<div class="d-flex align-items-center container" style="margin-top: 100px;">
-    <div class="card container w-50 project-container ">
-        <div class="card-body">
-            <h5 class="card-title " style="padding-left: 180px;">Project Name:<%=project.name%>
-            </h5>
-            <p class="card-text bg-sec">Project Details:<%=project.description%>
-            </p>
-            <p class="card-text">Project Author:<%=project.author%>
-            </p>
+  <!-- <link rel="stylesheet" href="../assets/css/project_page.css"> -->
+
+
+
+  <div class="container mt-5" > <!-- Add margin-top for spacing -->
+    <div class="d-flex justify-content-center"> <!-- This div will center the project details card -->
+        <div class="card w-50"> <!-- Adjust the width as needed to center the card -->
+            <div class="card-body">
+                <h5 class="card-title text-center">Project Name: <%= project.name %></h5>
+                <p class="card-text">Project Details: <%= project.description %></p>
+                <p class="card-text">Project Author: <%= project.author %></p>
+            </div>
         </div>
     </div>
-</div>
-
-  <%-include('./partials/_issues'); %>
+    <!-- The issues list will follow and take the full width -->
+    <div > <!-- Adds a little space between the card and the issues list -->
+        <%- include('./partials/_issues'); %>
+    </div>
 </div>

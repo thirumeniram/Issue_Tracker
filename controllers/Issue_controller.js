@@ -5,13 +5,15 @@ const Issue = require('../models/issueModel');
 module.exports.createIssue = async function(req, res) {
   try {
     let project = await Project.findById(req.params.id);
+    
     if (project) {
       let issue = await Issue.create({
-        title: req.body.title,
+        title: req.body.name,
         description: req.body.description,
         labels: req.body.labels,
         author: req.body.author,
       });
+      
       project.issues.push(issue);
 
       // Labels handling
